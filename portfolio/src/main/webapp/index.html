@@ -16,7 +16,7 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
     </head>
-    <body id="page-top">
+    <body id="page-top" onload="loadTasks()">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
             <a class="navbar-brand js-scroll-trigger" href="#page-top">
@@ -33,6 +33,7 @@
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Awards</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#messages">Messages</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#comments">Comments</a></li>
 
                 </ul>
             </div>
@@ -185,8 +186,27 @@
 
                     </ul>
                 </div>
+
+                
             </section>
+            <!-- Comment -->
             
+            <section class="resume-section" id="comments">
+                <div class="resume-section-content">
+                <body onload="loadTasks()">
+                    <h2 class="mb-5">Comments</h2>
+                    <form method="POST" action="/new-task">
+                    <input type="text" name="title">
+                    <br/>
+                    <br/>
+                    <button>Submit</button>
+                    </form>
+                    <hr/>
+                    <ul id="task-list"></ul>
+
+                </body>
+                </div>
+            <section>
         </div>
         <!-- Bootstrap core JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
