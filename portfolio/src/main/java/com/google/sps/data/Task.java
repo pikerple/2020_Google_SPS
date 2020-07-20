@@ -12,17 +12,18 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-/**
- * Adds a random greeting to the page.
- */
-function addRandomGreeting() {
-  const greetings =
-      ['Hello world!', '¡Hola Mundo!', '你好，世界！', 'Bonjour le monde!'];
+package com.google.sps.data;
 
-  // Pick a random greeting.
-  const greeting = greetings[Math.floor(Math.random() * greetings.length)];
+/** An item on a todo list. */
+public final class Task {
 
-  // Add it to the page.
-  const greetingContainer = document.getElementById('greeting-container');
-  greetingContainer.innerText = greeting;
+  private final long id;
+  private final String title;
+  private final long timestamp;
+
+  public Task(long id, String title, long timestamp) {
+    this.id = id;
+    this.title = title;
+    this.timestamp = timestamp;
+  }
 }

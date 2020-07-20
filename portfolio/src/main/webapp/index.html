@@ -1,18 +1,219 @@
 <!DOCTYPE html>
+<html><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><head>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-  </head>
-  <body>
-    <div id="content">
-      <h1>My Portfolio</h1>
-      <p>This is my portfolio.</p>
-      <p>Click here to get a random message:</p>
-      <button onclick="addRandomGreeting()">Hello</button>
-      <div id="greeting-container"></div>
-    </div>
-  </body>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Mei Chi Chang - Portfolio</title>
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top" onload="loadTasks()">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">
+                <span class="d-block d-lg-none">Mei Chi Chang</span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.jpg" alt="" /></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Awards</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#messages">Messages</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#comments">Comments</a></li>
+
+                </ul>
+            </div>
+        </nav>
+        <!-- Page Content-->
+        <div class="container-fluid p-0">
+            <!-- About-->
+            <section class="resume-section" id="about">
+                <div class="resume-section-content">
+                   
+                    <h1 class="mb-0">
+                        MEI CHI
+                        <span class="text-primary">CHANG</span>
+                    </h1>
+                    <div class="subheading mb-5">
+                        
+                        <a href="b07902074@csie.ntu.edu.com">b07902074@csie.ntu.edu.tw</a>
+                    </div>
+                    <p class="lead mb-5">Hi, my name is Mandy.I am currently studying in Department of Computer Science and Information Engineering at National Taiwan University and also work as Intern at LINE Taiwan UIT team.</p>
+                    <p class="lead mb-5">哈囉，大家好！我是媄姞，目前就讀於台灣大學資訊工程學系，同時也在LINE Taiwan UIT Team 擔任實習生。</p>
+                    <div class="social-icons">
+                        <a class="social-icon" href="https://www.linkedin.com/in/%E5%AA%84%E5%A7%9E-%E5%BC%B5-a94086189/"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-icon" href="https://github.com/pikerple"><i class="fab fa-github"></i></a>
+                        <a class="social-icon" href="https://medium.com/@b07902074"><i class="fab fa-medium"></i></a>
+                        <a class="social-icon" href="https://www.facebook.com/meiji.chang.9"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Experience-->
+            <section class="resume-section" id="experience">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Experience</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Program Manager</h3>
+                            <a href="https://sprout.tw/spt/" class="subheading mb-3">NTU CSIE SRPOUT</a>
+                            <p>- Interface with students and answer questions regarding courses</p>
+                            <p>- Collaborate with teachers to develop and maintain curriculum standards, develop mission statements, and set performance goals and objectives</p>
+                            <p>- Plan, administer, and control budgets, maintain financial records regarding the program</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">July 2019 - Present</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Software Engineer Intern</h3>
+                            <a href="https://www.gridwell.com.tw/" class="subheading mb-3">Gridwell</a>
+                            <p>- Help to develop the monitoring system of high-voltage power transmission lines</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">February 2020 - June 2020</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Computer Science Teacher </h3>
+                            <div class="subheading mb-3">Kang Chiao International School</div>
+                            <p>- Prepare and deliver lectures to students on topics such as programming, data structures, and software design</p>
+                            <p>- Prepare course materials, such as syllabi, homework assignments, and handouts</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">September 2019 - June 2020</span></div>
+                    </div>
+                    
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Education-->
+            <section class="resume-section" id="education">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Education</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">University of National Taiwan University</h3>
+                            <div class="subheading mb-3">Bachelor of Science</div>
+                            <div>Computer Science and Information Engineering</div>
+                            <p>GPA: 3.87 / 4.3</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">August 2018 - Present</span></div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Skills-->
+            <section class="resume-section" id="skills">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Skills</h2>
+                    <h3 class="mb-0">Languages</h3> 
+                    <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Mandarin (Native)
+                    </li>
+                    <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            English (Fluent)
+
+                    </li>
+                    
+                    <h3 class="mb-5">Programming Languages & Tools</h3>
+                    <ul class="list-inline dev-icons">
+                        <li class="list-inline-item"><i class="fab fa-python"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-html5"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-css3-alt"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-php"></i></li>
+                       
+                    </ul>
+                    
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Interests-->
+            <section class="resume-section" id="interests">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Interests</h2>
+                    <p>Coming Soon.</p>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Awards-->
+            <section class="resume-section" id="awards">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Awards & Certifications</h2>
+                    <ul class="fa-ul mb-0">
+
+                        <li>
+                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                             Machine Learning Scholarship Program for Microsoft Azure
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                            2
+                            <sup>nd</sup>
+                            Place - Taiwan Education Science Fair Project in Computer Science & Information Engineering - 2017
+                            <a href="https://www.ntsec.edu.tw/Science-Content.aspx?cat=12956&a=6821&fld=&key=&isd=1&icop=10&p=1&sid=13758">more details</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Messages -->
+            <section class="resume-section" id="messages">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Messages</h2>
+                    <ul class="fa-ul mb-0">
+
+                       <div id="content">
+                            <h1>Random Quotes</h1>
+                            <p>Click here to see a random quote:</p>
+                            <button onclick="getRandomQuote()">Fetch a quote!</button>
+                            <div id="quote-container"></div>
+                        </div>
+
+                    </ul>
+                </div>
+
+                
+            </section>
+            <!-- Comment -->
+            
+            <section class="resume-section" id="comments">
+                <div class="resume-section-content">
+                <body onload="loadTasks()">
+                    <h2 class="mb-5">Comments</h2>
+                    <form method="POST" action="/new-task">
+                    <input type="text" name="title">
+                    <br/>
+                    <br/>
+                    <button>Submit</button>
+                    </form>
+                    <hr/>
+                    <ul id="task-list"></ul>
+
+                </body>
+                </div>
+            <section>
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
 </html>
