@@ -12,18 +12,18 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package com.google.sps.data;
+package com.google.sps.servlets;
 
-/** An item on a todo list. */
-public final class Task {
 
-  private final long id;
-  private final String title;
-  private final long timestamp;
+public class Comment { 
 
-  public Task(long id, String title, long timestamp) {
-    this.id = id;
-    this.title = title;
-    this.timestamp = timestamp;
-  }
+    public Comment(String m, String i, long t){
+        message = m;
+        imageUrl = i;
+        timestamp = t;
+    }
+
+    String message;
+	String imageUrl;
+    long timestamp;
 }
