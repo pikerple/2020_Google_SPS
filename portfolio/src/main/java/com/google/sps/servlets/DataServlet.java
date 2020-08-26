@@ -19,14 +19,43 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import com.google.gson.Gson;
+import java.util.ArrayList;
+import java.util.List;
+import com.google.appengine.api.datastore.DatastoreService;
+import com.google.appengine.api.datastore.DatastoreServiceFactory;
+import com.google.appengine.api.datastore.Entity;
+import com.google.appengine.api.datastore.PreparedQuery;
+import com.google.appengine.api.datastore.Query;
+import com.google.appengine.api.datastore.Query.SortDirection;
 
 /** Servlet that returns some example content. TODO: modify this file to handle comments data */
 @WebServlet("/data")
 public class DataServlet extends HttpServlet {
-
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-    response.setContentType("text/html;");
-    response.getWriter().println("<h1>Hello Mandy!</h1>");
-  }
+    // query comments from database
+		Query query = new Query("Comments").addSort("timestamp", SortDirection.ASCENDING);
+    DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
+		PreparedQuery results = datastore.prepare(query);
+		
+		// Put the comments into a list in order to use gson to convert
+    List<Comment> comments = new ArrayList<>();
+		for (Entity entity : results.asIterable()) {
+			long id = entity.getKey().getId();
+			String message = (String) entity.getProperty("message");
+			String imageUrl = (String) entity.getProperty("imageUrl");
+			long timestamp = 
+			(long) entity.getProperty("timestamp");
+			comments.add(new Comment(message, imageUrl, timestamp));
+		}
+		// convert comment to JSON
+    Gson gson = new Gson();
+    String json = gson.toJson(comments);
+		response.setContentType("application/json;");
+    response.getWriter().println(json);
+		
+  } 
+	
+  
 }
